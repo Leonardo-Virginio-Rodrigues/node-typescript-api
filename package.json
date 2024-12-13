@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "yarn build && node dist/src/index.js"
+    "start": "yarn build && node dist/src/index.js",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,9 @@
   "devDependencies": {
     "@types/module-alias": "2.0.1",
     "@types/node": "14.0.13",
+    "@typescript-eslint/eslint-plugin": "5.8.1",
+    "@typescript-eslint/parser": "5.8.1",
+    "eslint": "8.5.0",
     "typescript": "3.9.5"
   },
   "dependencies": {
