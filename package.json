@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --runInBand",
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
+    "start:dev": "ts-node-dev \"src/index.ts\"",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix"
   },
@@ -25,12 +27,18 @@
   },
   "homepage": "https://github.com/Leonardo-Virginio-Rodrigues/node-typescript-api#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/module-alias": "2.0.1",
     "@types/node": "14.0.13",
+    "@types/supertest": "2.0.9",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
     "eslint": "8.5.0",
-    "typescript": "3.9.5"
+    "jest": "^29.7.0",
+    "supertest": "4.0.2",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "1.1.8",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "module-alias": "2.2.2"
